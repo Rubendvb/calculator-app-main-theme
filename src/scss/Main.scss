@@ -1,0 +1,15 @@
+@use './variables' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$font-family;
+  background-color: var(--body-bg);
+
+  max-height: 100vh;
+  padding: 30px 24px;
+}
