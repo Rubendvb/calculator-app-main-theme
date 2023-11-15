@@ -10,17 +10,19 @@ const themes = {
 export default function Header() {
   const [positionToggle, setPositionToggle] = useState(1)
 
-  useEffect(() => {
-    const root = document.documentElement
-
-    root.setAttribute('data-theme', themes[positionToggle])
-  }, [positionToggle])
-
   function handleThemeChange(e) {
     let valueToggle = Number(e?.target?.value)
 
     setPositionToggle(valueToggle)
   }
+
+  useEffect(() => {
+    const root = document.documentElement
+
+    root.setAttribute('data-theme', themes[positionToggle])
+
+    localStorage.setItem('theme', themes[positionToggle])
+  }, [positionToggle])
 
   return (
     <header className="header">
