@@ -1,0 +1,28 @@
+.keypad {
+  margin-top: 32px;
+
+  &__screen {
+    width: 100%;
+    background-color: var(--bg-screen);
+    color: var(--color-text);
+    height: 5.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 26px;
+    font-size: 2rem;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  &__container {
+    border-radius: 8px;
+    width: 100%;
+    background-color: var(--bg-toogle);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.813rem;
+  }
+}

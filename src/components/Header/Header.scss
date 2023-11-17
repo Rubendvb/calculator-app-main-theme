@@ -1,26 +1,5 @@
 @use '../../scss/variables' as v;
 
-:root[data-theme='theme1'] {
-  --body-bg: hsl(222, 26%, 31%);
-  --color-text: hsl(0, 0%, 100%);
-  --bg-toogle: hsl(223, 31%, 20%);
-  --color-toogle: hsl(6, 63%, 50%);
-}
-
-:root[data-theme='theme2'] {
-  --body-bg: hsl(0, 0%, 90%);
-  --color-text: hsl(60, 10%, 19%);
-  --bg-toogle: hsl(0, 5%, 81%);
-  --color-toogle: hsl(25, 98%, 40%);
-}
-
-:root[data-theme='theme3'] {
-  --body-bg: hsl(268, 75%, 9%);
-  --color-text: hsl(52, 100%, 62%);
-  --bg-toogle: hsl(268, 71%, 12%);
-  --color-toogle: hsl(176, 100%, 44%);
-}
-
 .header {
   display: flex;
   justify-content: space-between;
