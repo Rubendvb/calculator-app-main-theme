@@ -1,11 +1,29 @@
 @use './variables' as v;
 
+:root {
+  --shadow-key-properties: 0px 4px 0 0;
+}
+
 :root[data-theme='theme1'] {
   --body-bg: hsl(222, 26%, 31%);
   --color-text: hsl(0, 0%, 100%);
   --bg-toogle: hsl(223, 31%, 20%);
   --color-toogle: hsl(6, 63%, 50%);
   --bg-screen: hsl(224, 36%, 15%);
+  --bg-key: hsl(30, 25%, 89%);
+  --color-number: hsl(221, 14%, 31%);
+  --shadow-key: hsl(28, 16%, 65%);
+  --bg-key-reset-del: hsl(225, 21%, 49%);
+  --shadow-key-reset-del: hsl(224, 28%, 35%);
+  --color-text-reset-del: hsl(0, 0%, 100%);
+
+  --bg-key-equal: hsl(6, 63%, 50%);
+  --shadow-key-equal: hsl(6, 70%, 34%);
+  --color-text-equal: hsl(0, 0%, 100%);
+
+  --bg-key-hover: hsl(0, 0%, 100%);
+  --bg-key-reset-del-hover: hsl(224, 51%, 76%);
+  --bg-key-equal-hover: hsl(6, 93%, 67%);
 }
 
 :root[data-theme='theme2'] {
@@ -14,6 +32,20 @@
   --bg-toogle: hsl(0, 5%, 81%);
   --color-toogle: hsl(25, 98%, 40%);
   --bg-screen: hsl(0, 0%, 93%);
+  --bg-key: hsl(45, 7%, 89%);
+  --color-number: hsl(60, 10%, 19%);
+  --shadow-key: hsl(35, 11%, 61%);
+  --bg-key-reset-del: hsl(185, 42%, 37%);
+  --shadow-key-reset-del: hsl(185, 58%, 25%);
+  --color-text-reset-del: hsl(0, 0%, 100%);
+
+  --bg-key-equal: hsl(25, 98%, 40%);
+  --shadow-key-equal: hsl(25, 99%, 27%);
+  --color-text-equal: hsl(0, 0%, 100%);
+
+  --bg-key-hover: hsl(0, 0%, 100%);
+  --bg-key-reset-del-hover: hsl(185, 41%, 56%);
+  --bg-key-equal-hover: hsl(25, 100%, 61%);
 }
 
 :root[data-theme='theme3'] {
@@ -22,6 +54,21 @@
   --bg-toogle: hsl(268, 71%, 12%);
   --color-toogle: hsl(176, 100%, 44%);
   --bg-screen: hsl(268, 71%, 12%);
+  --bg-key: hsl(268, 47%, 21%);
+  --color-number: hsl(52, 100%, 62%);
+  --shadow-key: hsl(290, 70%, 36%);
+
+  --bg-key-reset-del: hsl(281, 89%, 26%);
+  --shadow-key-reset-del: hsl(285, 91%, 52%);
+  --color-text-reset-del: hsl(0, 0%, 100%);
+
+  --bg-key-equal: hsl(176, 100%, 44%);
+  --shadow-key-equal: hsl(177, 92%, 70%);
+  --color-text-equal: hsl(198, 20%, 13%);
+
+  --bg-key-hover: hsl(268, 54%, 44%);
+  --bg-key-reset-del-hover: hsl(280, 56%, 44%);
+  --bg-key-equal-hover: hsl(177, 100%, 79%);
 }
 
 * {
@@ -34,6 +81,13 @@ body {
   font-family: v.$font-family;
   background-color: var(--body-bg);
 
-  max-height: 100vh;
+  min-height: 100vh;
   padding: 30px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  max-width: 33.75rem;
 }

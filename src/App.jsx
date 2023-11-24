@@ -3,11 +3,11 @@ import Keypad from './components/Keypad/Keypad'
 
 function App() {
   return (
-    <>
+    <div className="calculator">
       <Header />
 
       <Keypad />
-    </>
+    </div>
   )
 }
 

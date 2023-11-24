@@ -1,0 +1,96 @@
+@use '../../scss/variables' as v;
+
+.button {
+  height: 60px;
+  width: 60px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--bg-key);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-number);
+  font-family: v.$font-family;
+  box-shadow: var(--shadow-key-properties) var(--shadow-key);
+  text-transform: uppercase;
+  outline: none;
+  padding: 1.3rem 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-key-hover);
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 6.25rem;
+  }
+}
+
+.dot {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+.del {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  font-size: 1.2rem;
+  background-color: var(--bg-key-reset-del);
+  box-shadow: var(--shadow-key-properties) var(--shadow-key-reset-del);
+  color: var(--color-text-reset-del);
+
+  &:hover {
+    background-color: var(--bg-key-reset-del-hover);
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.times {
+  text-transform: lowercase;
+}
+
+.plus {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.minus {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+.reset {
+  grid-column: 1 / 3;
+  width: 100%;
+  font-size: 1.2rem;
+  color: var(--color-text-reset-del);
+  background-color: var(--bg-key-reset-del);
+  box-shadow: var(--shadow-key-properties) var(--shadow-key-reset-del);
+
+  &:hover {
+    background-color: var(--bg-key-reset-del-hover);
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.equal {
+  grid-column: 3 / -1;
+  width: 100%;
+  background-color: var(--bg-key-equal);
+  box-shadow: var(--shadow-key-properties) var(--shadow-key-equal);
+  color: var(--color-text-equal);
+  font-size: 1.2rem;
+
+  &:hover {
+    background-color: var(--bg-key-equal-hover);
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
