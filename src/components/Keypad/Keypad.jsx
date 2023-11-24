@@ -94,6 +94,14 @@ export default function Keypad() {
     setPendingValue(null)
   }
 
+  const handleDel = () => {
+    if (currentValue === '0') {
+      return
+    }
+
+    setCurrentValue(currentValue.slice(0, -1))
+  }
+
   return (
     <main className="keypad">
       <div className="keypad__screen">
@@ -114,6 +122,8 @@ export default function Keypad() {
               onClick={() =>
                 operator === 'reset'
                   ? handleClear()
+                  : operator === 'del'
+                  ? handleDel()
                   : handleOperation(operator)
                   ? operator === '='
                   : handleCalculate()
